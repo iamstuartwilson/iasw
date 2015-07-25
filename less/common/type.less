@@ -1,0 +1,153 @@
+html {
+    font-family: @font-family;
+    font-size: @font-size;
+    font-weight: @font-weight;
+    letter-spacing: .025em;
+}
+
+body {
+    color: @colour-grey;
+    background: @colour-grey;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4 ,
+h5 {
+    font-weight: 400;
+    line-height: 1.2;
+
+    small {
+        display: block;
+        font-weight: 300;
+        margin-top: .25em;
+    }
+
+    // No nasty colour overrides
+    .inherit-link();
+}
+
+h1 {
+    .font-size(1.8);
+    letter-spacing: .1em;
+    margin: 1em 0 .5em;
+}
+
+h2 {
+    .font-size(1.4);
+    margin: 1em 0 .5em;
+    letter-spacing: .1em;
+}
+
+h3,
+h4,
+h5 {
+    .font-size(1);
+    margin: .5em 0 .25em;
+}
+
+// Generic link styling
+a {
+    text-decoration: none;
+    color: @colour-theme;
+
+    &:hover,
+    &:hover,
+    &:hover {
+        text-decoration: none;
+        color: @colour-theme;
+    }
+}
+
+// Paragraphs and lists
+p,
+ul,
+ol {
+    margin: 1em 0;
+    line-height: 1.2;
+}
+
+// Dividers
+hr {
+    background: none;
+    border: none;
+    border-top: solid @colour-grey-light @dimension-divider-height;
+    margin: 1em 0;
+}
+
+// Text Styles
+.text-spaced {
+    letter-spacing: .1em;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-uppercase {
+    text-decoration: underline;
+}
+
+.text-lead {
+    .font-size(1.2);
+}
+
+.text-muted {
+    color: @colour-grey-medium;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// List styles
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.list-inline {
+    .list-unstyled();
+    margin: .5em -.5em;
+
+    li {
+        display: inline-block;
+        margin: .5em;
+    }
+}
+
+// Link styles
+.link-underline {
+    text-decoration: underline;
+}
+
+// Markdown styling
+.markdown {
+    img {
+        .img-responsive();
+        margin: 1em auto;
+        border: solid @colour-grey-light @dimension-divider-height;
+    }
+
+    p:first-of-type {
+        .text-lead();
+    }
+}
+
+@media(max-width: @screen-sm) {
+    html {
+        font-size: @font-size-mobile;
+    }
+}
+
+@media(min-width: @screen-sm) {
+    .text-right-sm {
+        text-align: right;
+    }
+}

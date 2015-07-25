@@ -1,0 +1,38 @@
+{% extends 'template.twig' %}
+{% set currentPage = 'projects' %}
+{% set pageTitle = title~' | Projects' %}
+
+{% block body %}
+
+{% include 'projects/partials/hero.twig' %}
+
+<section class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content markdown">
+                {{ content|raw }}
+
+                {% if tags %}
+                    <hr>
+                    <h2>Technology</h2>
+                    <p>
+                    {% for tag in tags|split(', ') %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--alternative text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/projects/" class="button">See Other Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

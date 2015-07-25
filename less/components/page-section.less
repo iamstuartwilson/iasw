@@ -1,0 +1,77 @@
+// Page sections
+.page-section {
+    padding: 3em 0;
+    background-color: @colour-white;
+}
+
+.page-section--no-padding {
+    padding: 0 !important;
+}
+
+.page-section--sm {
+    padding: 1.5em 0;
+}
+
+.page-section--lg {
+    padding: 6em 0;
+}
+
+.page-section--alternative {
+    background-color: @colour-grey-light;
+}
+
+.page-section--theme {
+    background-color: @colour-theme;
+    color: @colour-white;
+}
+
+.page-section--dark {
+    background-color: @colour-grey;
+    color: @colour-white;
+    .inherit-link();
+}
+
+.page-section--hero {
+    padding-right: @dimension-padding-default;
+    padding-left: @dimension-padding-default;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .page-section--theme();
+}
+
+.page-section--home {
+    background-image: url('@{path-images}/underwater.jpg');
+}
+
+.page-section__content {
+    & > :first-child {
+        margin-top: 0;
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: @screen-sm) {
+    .page-section {
+        padding: 1.5em 0;
+    }
+
+    .page-section--lg {
+        padding: 2em 0;
+    }
+}
+
+@media(min-width: @screen-sm) {
+    .page-section__content--sm {
+        & > :first-child {
+            margin-top: 0;
+        }
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

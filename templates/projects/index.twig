@@ -1,0 +1,19 @@
+{% extends 'template.twig' %}
+{% set currentPage = 'projects' %}
+{% set pageTitle = 'Projects' %}
+
+{% block body %}
+<section class="page-section page-section--sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h1>Latest Projects</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% for project in projects %}
+    {% include 'projects/partials/project-box.twig' with project %}
+{% endfor %}
+{% endblock body %}

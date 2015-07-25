@@ -1,0 +1,22 @@
+{
+    "name": "iamstuartwilson/iasw",
+    "description": "@iamstuartwilson portfolio",
+    "require": {
+        "twig/twig": "^1",
+        "altorouter/altorouter": "1.1.0",
+        "erusev/parsedown": "^1.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stuart Wilson",
+            "email": "sjwilson89@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0" : {
+            "Iamstuartwilson" : "src"
+        }
+    }
+}

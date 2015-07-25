@@ -1,0 +1,81 @@
+{% extends 'template.twig' %}
+{% set pageTitle = 'CV' %}
+
+{% block header %}
+<header class="site-header">
+    <div class="container">
+        <nav class="row">
+            <div class="col-xs-4">
+                <p class="site-header__logo"><a href="/">Stuart Wilson.</a></p>
+            </div>
+            <div class="col-xs-8">
+                <div class="site-header__text">
+                    <ul class="list-inline text-right">
+                        <li><a href="http://iamstuartwilson.com">iamstuartwilson.com</a></li>
+                        <li><a href="tel:00447825086954">(+44) 7825 086 954</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+{% endblock header %}
+
+{% block body %}
+<div class="page-section page-section--sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                {% include 'partials/about.twig' %}
+
+                <div class="row">
+                    <div class="col-sm-7 print-column">
+                        <h2>Education</h2>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <h3>Oxford Brookes University</h3>
+                                <small class="text-muted">Media Technology First Class Honours Degree</small>
+                            </li>
+                            <li>
+                                <h3>Peter Symonds College Winchester</h3>
+                                <small class="text-muted">Art, Media Studies, English Language</small>
+                            </li>
+                            <li>
+                                <h3>Henry Beaufort School Winchester</h3>
+                                <small class="text-muted">10 GCSEs Grade A* - C</small>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-5 print-column">
+                    {% include 'partials/skills.twig' %}
+                    </div>
+                </div>
+
+                <h2>Experience</h2>
+
+                <h3>Front End Developer <span class="text-muted">graze.com</span></h3>
+                <small class="text-muted">Aug 2014 - Present</small>
+                <p>During my time at graze.com I’ve been involved in re-writing the CSS framework as part of a team whilst modernising the website’s JavaScript using CommonJS modules and Browserify. My day to day duties include developing the website UI to support commercial projects whilst focusing on code modularity, reusability and scalability in an agile team of software developers.</p>
+
+                <h3>Lead Devloper  <span class="text-muted">eight&amp;four</span></h3>
+                <small class="text-muted">Aug 2012 - Aug 2014</small>
+                <p>Joining eight&amp;four as a Junior Developer, I moved quickly within the agency to establish myself as the Lead Developer within nine months. Heading up the technical output of the agency, my main responsibilities included developing, testing and deploying primarily WordPress built websites. Other responsibilities as the senior developer on the team involved scoping out new projects with clients, writing technical specifications and bringing technical innovation to the agency.</p>
+                <p>During my time at eight&amp;four, I was involved in work for clients such as the RSPCA, EchoFalls, Freesat, Cosmopolitan and Solarcentury.</p>
+
+                <h3>Web Developer/Designer Intern  <span class="text-muted">The Reese Group</span></h3>
+                <small class="text-muted">Jul 2011 - Sep 2011</small>
+                <p>Working for the ReesGroup ,I was primarily responsible for the redesign, expansion and re-launch of www.worldofswimming.co.uk. Re-branding the website and expanding its functionality gave me valuable experience as an in-house designer and developer and generated momentum that I took forward to my final year of university and then into the start of my career.</p>
+
+                <div class="print-hidden text-center">
+                    <hr>
+                    <a href="/public/stuart-wilson-web-developer-cv.pdf" download class="button">Download PDF Version</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer null %}

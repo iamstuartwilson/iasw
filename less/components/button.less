@@ -1,0 +1,33 @@
+.button {
+    .font-size(.9);
+    display: inline-block;
+    padding: .5em 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: @colour-theme;
+    border: solid @colour-theme 1px;
+    background: none;
+    cursor: pointer;
+    .transition(background-color .2s ease-out);
+
+    &:hover,
+    &:active {
+        background-color: @colour-theme;
+        color: @colour-white;
+    }
+}
+
+.button--white {
+    border-color: @colour-white;
+    color: @colour-white;
+
+    &:hover,
+    &:active {
+        background-color: @colour-white;
+        color: @colour-theme;
+    }
+}
+
+.button--push {
+    margin: 1em 0;
+}

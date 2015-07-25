@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ pageTitle ? pageTitle~' | ' }}Stuart Wilson | London Based Web Developer</title>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic=">
+    <link type="text/css" rel="stylesheet" href="/public/css/iasw.css">
+</head>
+
+<body>
+{% block header %}
+<header class="site-header">
+    <div class="container">
+        <nav class="row">
+            <div class="col-xs-12">
+                <p class="site-header__logo"><a href="/">Stuart Wilson.</a></p>
+            </div>
+        </nav>
+    </div>
+</header>
+{% endblock header %}
+
+{% block body null %}
+
+{% block footer %}
+<footer class="page-section page-section--dark page-section--sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>&copy; Stuart Wilson {{ date('Y') }}.</p>
+                <p><i>Built with Love, HTML and CSS.</i></p>
+                <p><a href="https://github.com/iamstuartwilson/iasw" class="link-underline">View code on github</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}
+</body>
+</html>

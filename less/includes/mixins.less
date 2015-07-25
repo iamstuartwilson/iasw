@@ -1,0 +1,18 @@
+// Resets a link to inherit from parent
+.inherit-link() {
+    a {
+        color: inherit;
+
+        &:hover,
+        &:active,
+        &:visited {
+            color: inherit;
+        }
+    }
+}
+
+// Font rule mixin with pixel fallback
+.font-size(@size) {
+    font-size: @font-size * @size;
+    font-size: ~"@{size}rem";
+}

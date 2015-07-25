@@ -1,0 +1,25 @@
+// Site header
+.site-header {
+    background: @colour-white;
+    border-bottom: solid @colour-grey-light @dimension-divider-height;
+    margin-top: @dimension-divider-height;
+}
+
+.site-header__logo {
+    margin: 0;
+    padding: 1em 0;
+    line-height: 1;
+    font-weight: bold;
+    color: @colour-grey;
+    .font-size(1.4);
+    .inherit-link();
+}
+
+.site-header__text {
+    padding-top: 1em;
+
+    > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,58 @@
+{% extends 'template.twig' %}
+
+{% block body %}
+<section class="page-section page-section--lg page-section--hero page-section--home text-center">
+    <div class="container">
+        <div class="row">
+            <div class="span12 page-section__content">
+                <h1 class="text-spaced">
+                Stuart Wilson
+                <small>London Based Web Developer</small>
+                </h1>
+
+                <a href="/projects" class="button button--white button--push">View Latest Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 page-section__content">
+                {% include 'partials/about.twig' %}
+            </div>
+
+            <div class="col-sm-6 page-section__content--sm">
+                {% include 'partials/skills.twig' %}
+                <hr>
+                <a href="/cv/">View CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--alternative text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 page-section__content">
+                <h2>Contact</h2>
+
+                <p class="text-lead">Don't be shy, say <i>bonjour</i> via one of these wonderful mediums...</p>
+
+                <ul class="list-inline">
+                    <li>
+                        <a href="mailto:sjwilson89@gmail.com" target="_blank" class="button">email</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/iamstuartwilson" target="_blank" class="button">github</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/iamstuartwilson" target="_blank" class="button">twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
