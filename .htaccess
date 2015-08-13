@@ -11,7 +11,7 @@ RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
 RewriteRule ^(.*)$ public/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule !\.(ico)$ index.php [L,QSA]
+RewriteRule ^(.*)$ index.php [L,QSA]
 
 <ifModule mod_gzip.c>
 mod_gzip_on Yes
